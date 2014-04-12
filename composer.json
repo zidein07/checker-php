@@ -1,0 +1,12 @@
+{
+    "name": "vlad/chek-winning-php",
+    "authors": [
+        {
+            "name": "AveVlad",
+            "email": "dev@vld.me"
+        }
+    ],
+    "require": {
+      "sunra/php-simple-html-dom-parser": "v1.5.0"
+    }
+}
