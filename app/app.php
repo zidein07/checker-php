@@ -6,8 +6,8 @@ $code = new CheckWinning(array(
     "url" => "http://code.tutsplus.com/",
     "tmpName" => "code",
     "htmlNode" => ".posts__post-title",
-    "email" => [
+    "email" => array(
         "dev@vld.me",
         "zidein07@gmail.com",
-    ],
+    ),
 ));
