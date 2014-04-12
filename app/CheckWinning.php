@@ -8,14 +8,20 @@ class CheckWinning
     public $email = array();
     public $file;
     public $htmlNode;
-    public $data;
+    public $data = "";
 
     public function __construct($options = array())
     {
         $this->url = $options['url'];
         $this->email = $options['email'];
         $this->htmlNode = $options['htmlNode'];
-        $this->file = dirname(__FILE__) . DIRECTORY_SEPARATOR . "tmp" . DIRECTORY_SEPARATOR . $options['tmpName'];
+        $this->file = dirname(__FILE__) . DIRECTORY_SEPARATOR . $options['tmpPath'] . DIRECTORY_SEPARATOR . $options['tmpName'];
+        if (!is_dir($options['tmpPath'])) {
+            mkdir($options['tmpPath']);
+        }
+        if (!file_exists($this->file)) {
+            $this->setFile();
+        }
         $this->query();
     }
 
@@ -30,12 +36,12 @@ class CheckWinning
 
     public function check()
     {
-//        $nowFile = $this->data;
-//        $oldFile = $this->getFile();
-//        if ($nowFile !== $oldFile) {
-//            $this->setFile();
-//        }
-        $this->sendMail();
+        $nowFile = $this->data;
+        $oldFile = $this->getFile();
+        if ($nowFile !== $oldFile) {
+            $this->setFile();
+            $this->sendMail();
+        }
     }
 
     public function getFile()

@@ -4,7 +4,8 @@ require_once "CheckWinning.php";
 
 $code = new CheckWinning(array(
     "url" => "http://code.tutsplus.com/",
-    "tmpName" => "code",
+    "tmpPath" => "tmp",
+    "tmpName" => "code.txt",
     "htmlNode" => ".posts__post-title",
     "email" => array(
         "dev@vld.me",
