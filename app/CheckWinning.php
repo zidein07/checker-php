@@ -5,12 +5,12 @@ class CheckWinning
 {
     public $url;
     public $dom;
-    public $email = [];
+    public $email = array();
     public $file;
     public $htmlNode;
     public $data;
 
-    public function __construct($options = [])
+    public function __construct($options = array())
     {
         $this->url = $options['url'];
         $this->email = $options['email'];

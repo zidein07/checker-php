@@ -2,7 +2,7 @@
 require_once "../vendor/autoload.php";
 require_once "CheckWinning.php";
 
-$code = new CheckWinning([
+$code = new CheckWinning(array(
     "url" => "http://code.tutsplus.com/",
     "tmpName" => "code",
     "htmlNode" => ".posts__post-title",
@@ -10,4 +10,4 @@ $code = new CheckWinning([
         "dev@vld.me",
         "zidein07@gmail.com",
     ],
-]);
+));
