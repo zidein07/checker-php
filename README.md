@@ -1,2 +1,2 @@
-chek-winning-php
+check-winning-php
 ================
