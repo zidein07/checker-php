@@ -1,7 +1,7 @@
 <?php
 use Sunra\PhpSimple\HtmlDomParser as Parser;
 
-class CheckWinning
+class Checker
 {
     public $url;
     public $dom;
