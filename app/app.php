@@ -1,8 +1,8 @@
 <?php
 require_once "../vendor/autoload.php";
-require_once "CheckWinning.php";
+require_once "Checker.php";
 
-$code = new CheckWinning(array(
+$code = new Checker(array(
     "url" => "http://code.tutsplus.com/",
     "tmpPath" => "tmp",
     "tmpName" => "code.txt",
